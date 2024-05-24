@@ -13,21 +13,21 @@ const Calculator = () => {
     e.preventDefault();
     let hasError = false;
 
-    if (!dayRef.current.value || isNaN(dayRef.current.value)) {
+    if (!dayRef.current.value || isNaN(dayRef.current.value) || dayRef.current.value > 31) {
       dayRef.current.style.border = "2px solid red";
       hasError = true;
     } else {
       dayRef.current.style.border = "";
     }
 
-    if (!monthRef.current.value || isNaN(monthRef.current.value)) {
+    if (!monthRef.current.value || isNaN(monthRef.current.value) || monthRef.current.value > 12) {
       monthRef.current.style.border = "2px solid red";
       hasError = true;
     } else {
       monthRef.current.style.border = "";
     }
 
-    if (!yearRef.current.value || isNaN(yearRef.current.value)) {
+    if (!yearRef.current.value || isNaN(yearRef.current.value) || yearRef.current.value > 2024) {
       yearRef.current.style.border = "2px solid red";
       hasError = true;
     } else {
