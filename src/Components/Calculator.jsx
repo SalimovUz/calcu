@@ -55,7 +55,7 @@ const Calculator = () => {
 
   return (
     <div className="container mx-auto h-screen items-center flex">
-      <div className="calcu p-[2%] bg-white justify-center mx-auto h-4/6  w-3/6 rounded-br-[150px] rounded-tr-[25px] rounded-tl-[25px] rounded-bl-[25px]">
+      <div className="calcu p-[2%] bg-white justify-center mx-auto h-4/6  w-5/6 sm:w-4/6 2xl:w-3/6 rounded-br-[50px] md:rounded-br-[100px] 2xl:rounded-br-[150px] rounded-tr-[25px] rounded-tl-[25px] rounded-bl-[25px]">
         <div className="top h-[20%]">
           <div className="inputs flex h-full gap-[3%]">
             <label className="w-1/4 h-full flex flex-col" htmlFor="day">
