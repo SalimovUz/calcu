@@ -55,7 +55,7 @@ const Calculator = () => {
 
   return (
     <div className="container mx-auto h-screen items-center flex">
-      <div className="calcu p-[2%] bg-white justify-center mx-auto h-4/6  w-5/6 sm:w-4/6 2xl:w-3/6 rounded-br-[50px] md:rounded-br-[100px] 2xl:rounded-br-[150px] rounded-tr-[25px] rounded-tl-[25px] rounded-bl-[25px]">
+      <div className="calcu p-[10%] sm:p-[8%] md:p-[6%] lg:p-[4%] xl:p-[2%] bg-white justify-center mx-auto h-4/6  w-5/6 sm:w-4/6 2xl:w-3/6 rounded-br-[50px] md:rounded-br-[100px] 2xl:rounded-br-[150px] rounded-tr-[25px] rounded-tl-[25px] rounded-bl-[25px]">
         <div className="top h-[20%]">
           <div className="inputs flex h-full gap-[3%]">
             <label className="w-1/4 h-full flex flex-col" htmlFor="day">
@@ -106,14 +106,14 @@ const Calculator = () => {
         </div>
 
         <div className="bottom flex flex-col gap-[10%] h-1/2">
-          <h1 className="text-2xl 2xl:text-6xl font-bold sm:text-4xl xl:text-5xl ">
-            <span className="text-2xl 2xl:text-7xl font-bold sm:text-4xl xl:text-5xl text-violet-600">{years}</span> Yosh
+          <h1 className="text-4xl 2xl:text-6xl font-bold sm:text-4xl xl:text-5xl ">
+            <span className="text-4xl 2xl:text-7xl font-bold sm:text-4xl xl:text-5xl text-violet-600">{years}</span> Yosh
           </h1>
-          <h1 className="text-2xl 2xl:text-6xl font-bold sm:text-4xl xl:text-5xl ">
-            <span className="text-2xl 2xl:text-7xl font-bold sm:text-4xl xl:text-5xl text-violet-600">{months}</span> Oy
+          <h1 className="text-4xl 2xl:text-6xl font-bold sm:text-4xl xl:text-5xl ">
+            <span className="text-4xl 2xl:text-7xl font-bold sm:text-4xl xl:text-5xl text-violet-600">{months}</span> Oy
           </h1>
-          <h1 className="text-2xl 2xl:text-6xl font-bold sm:text-4xl xl:text-5xl ">
-            <span className="text-2xl 2xl:text-7xl font-bold sm:text-4xl xl:text-5xl text-violet-600">{days}</span> Kunlar
+          <h1 className="text-4xl 2xl:text-6xl font-bold sm:text-4xl xl:text-5xl ">
+            <span className="text-4xl 2xl:text-7xl font-bold sm:text-4xl xl:text-5xl text-violet-600">{days}</span> Kunlar
           </h1>
         </div>
       </div>
