@@ -5,9 +5,9 @@ const Calculator = () => {
   const dayRef = useRef(null);
   const monthRef = useRef(null);
   const yearRef = useRef(null);
-  const [years, setYears] = useState("");
-  const [months, setMonths] = useState("");
-  const [days, setDays] = useState("");
+  const [years, setYears] = useState("--");
+  const [months, setMonths] = useState("--");
+  const [days, setDays] = useState("--");
 
   const confirmButton = (e) => {
     e.preventDefault();
@@ -66,6 +66,7 @@ const Calculator = () => {
                 type="text"
                 id="day"
                 required
+                placeholder="DD"
               />
             </label>
             <label className="w-1/4 h-full flex flex-col" htmlFor="month">
@@ -76,6 +77,7 @@ const Calculator = () => {
                 type="text"
                 id="month"
                 required
+                placeholder="MM"
               />
             </label>
             <label className="w-1/4 h-full flex flex-col" htmlFor="year">
@@ -86,6 +88,7 @@ const Calculator = () => {
                 type="text"
                 id="year"
                 required
+                placeholder="YY"
               />
             </label>
           </div>
@@ -103,14 +106,14 @@ const Calculator = () => {
         </div>
 
         <div className="bottom flex flex-col gap-[10%] h-1/2">
-          <h1 className="text-2xl font-bold sm:text-4xl xl:text-5xl ">
-            <span className="text-2xl font-bold sm:text-4xl xl:text-5xl text-violet-600">{years}</span> Yosh
+          <h1 className="text-2xl 2xl:text-6xl font-bold sm:text-4xl xl:text-5xl ">
+            <span className="text-2xl 2xl:text-7xl font-bold sm:text-4xl xl:text-5xl text-violet-600">{years}</span> Yosh
           </h1>
-          <h1 className="text-2xl font-bold sm:text-4xl xl:text-5xl ">
-            <span className="text-2xl font-bold sm:text-4xl xl:text-5xl text-violet-600">{months}</span> Oy
+          <h1 className="text-2xl 2xl:text-6xl font-bold sm:text-4xl xl:text-5xl ">
+            <span className="text-2xl 2xl:text-7xl font-bold sm:text-4xl xl:text-5xl text-violet-600">{months}</span> Oy
           </h1>
-          <h1 className="text-2xl font-bold sm:text-4xl xl:text-5xl ">
-            <span className="text-2xl font-bold sm:text-4xl xl:text-5xl text-violet-600">{days}</span> Kunlar
+          <h1 className="text-2xl 2xl:text-6xl font-bold sm:text-4xl xl:text-5xl ">
+            <span className="text-2xl 2xl:text-7xl font-bold sm:text-4xl xl:text-5xl text-violet-600">{days}</span> Kunlar
           </h1>
         </div>
       </div>
