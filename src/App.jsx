@@ -31,38 +31,23 @@ const App = () => {
       isNaN(year) ||
       yearRef.current.value > 2024
     ) {
-
-      // Day options
-      if (!day) dayRef.current.style.border = "2px solid red";
+      if (!day || isNaN(day)) dayRef.current.style.border = "2px solid red";
       else if (dayRef.current.value > 31) {
         error.textContent = "Kunni kiritishda xatolik";
         dayRef.current.style.border = "2px solid red";
-      } else if (isNaN(day) || dayRef.current.value) {
-        error.textContent = "Harf kiritish mumkin emas";
       }
 
-
-
-      // Month options
-      if (!month) monthRef.current.style.border = "2px solid red";
+      if (!month || isNaN(month))
+        monthRef.current.style.border = "2px solid red";
       else if (monthRef.current.value > 12) {
         error2.textContent = "Oy ni kiritishda xatolik";
         monthRef.current.style.border = "2px solid red";
-      } else if (isNaN(month) || monthRef.current.value) {
-        error2.textContent = "Harf kiritish mumkin emas";
       }
 
-
-
-
-
-      // Year options
-      if (!year) yearRef.current.style.border = "2px solid red";
+      if (!year || isNaN(year)) yearRef.current.style.border = "2px solid red";
       else if (yearRef.current.value > 2024) {
         error3.textContent = "Yilni kiritishda xatolik";
         yearRef.current.style.border = "2px solid red";
-      } else if (isNaN(year) || yearRef.current) {
-        error3.textContent = "Harf kiritish mumkin emas";
       }
       return;
     }
