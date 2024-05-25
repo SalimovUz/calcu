@@ -7,6 +7,9 @@ const App = () => {
   const dayRef = useRef(null);
   const monthRef = useRef(null);
   const yearRef = useRef(null);
+  const error = document.getElementById("error");
+  const error2 = document.getElementById("error2");
+  const error3 = document.getElementById("error3");
 
   const { years, months, days } = useSelector((state) => state.counter);
   const dispatch = useDispatch();
@@ -17,11 +20,54 @@ const App = () => {
     const month = monthRef.current.value;
     const year = yearRef.current.value;
 
-    if (!day || isNaN(day) || !month || isNaN(month) || !year || isNaN(year)) {
-      if (!day || isNaN(day)) dayRef.current.style.border = "2px solid red";
-      if (!month || isNaN(month))
+    if (
+      !day ||
+      isNaN(day) ||
+      dayRef.current.value > 31 ||
+      !month ||
+      isNaN(month) ||
+      monthRef.current.value > 12 ||
+      !year ||
+      isNaN(year) ||
+      yearRef.current.value > 2024
+    ) {
+
+      // Day options
+      if (!day) dayRef.current.style.border = "2px solid red";
+      else if (dayRef.current.value > 31) {
+        error.textContent = "Kunni kiritishda xatolik";
+        dayRef.current.style.border = "2px solid red";
+      } else if (isNaN(day) || dayRef.current.value) {
+        error.textContent = "Harf kiritish mumkin emas";
+      } else if (dayRef.current == " ") {
+        error.textContent = "Kunni kiriting";
+      }
+
+
+
+
+
+      // Month options
+      if (!month) monthRef.current.style.border = "2px solid red";
+      else if (monthRef.current.value > 12) {
+        error2.textContent = "Oy ni kiritishda xatolik";
         monthRef.current.style.border = "2px solid red";
-      if (!year || isNaN(year)) yearRef.current.style.border = "2px solid red";
+      } else if (isNaN(month) || monthRef.current.value) {
+        error2.textContent = "Harf kiritish mumkin emas";
+      }
+
+
+
+
+
+      // Year options
+      if (!year) yearRef.current.style.border = "2px solid red";
+      else if (yearRef.current.value > 2024) {
+        error3.textContent = "Yilni kiritishda xatolik";
+        yearRef.current.style.border = "2px solid red";
+      } else if (isNaN(year) || yearRef.current) {
+        error3.textContent = "Harf kiritish mumkin emas";
+      }
       return;
     }
 
@@ -43,6 +89,10 @@ const App = () => {
                 required
                 placeholder="DD"
               />
+              <p
+                className="absolute top-60 text-semibold text-rose-700"
+                id="error"
+              ></p>
             </label>
             <label className="w-1/4 h-full flex flex-col" htmlFor="month">
               <h1 className="text-xl ">Oy</h1>
@@ -54,6 +104,10 @@ const App = () => {
                 required
                 placeholder="MM"
               />
+              <p
+                className="absolute top-60 text-semibold text-rose-700"
+                id="error2"
+              ></p>
             </label>
             <label className="w-1/4 h-full flex flex-col" htmlFor="year">
               <h1 className="text-xl ">Yil</h1>
@@ -65,6 +119,10 @@ const App = () => {
                 required
                 placeholder="YY"
               />
+              <p
+                className="absolute top-60 text-semibold text-rose-700"
+                id="error3"
+              ></p>
             </label>
           </div>
         </div>
