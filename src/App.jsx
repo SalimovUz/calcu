@@ -39,11 +39,7 @@ const App = () => {
         dayRef.current.style.border = "2px solid red";
       } else if (isNaN(day) || dayRef.current.value) {
         error.textContent = "Harf kiritish mumkin emas";
-      } else if (dayRef.current == " ") {
-        error.textContent = "Kunni kiriting";
       }
-
-
 
 
 
